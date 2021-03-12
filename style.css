@@ -8,7 +8,7 @@
 
   /* font size */
   --font-small: 14px;
-  --font-regular: 15px;
+  --font-regular: 14px;
   --font-large: 24px;
 
   /* font weight */
@@ -32,6 +32,7 @@ body {
   font-weight: var(--weight-bold);
   text-align: center;
   margin: calc(var(--base-space) * 2);
+  cursor: pointer;
 }
 
 .album__container {
@@ -53,8 +54,9 @@ body {
   min-height: 30px;
   font-size: var(--font-small);
   color: var(--color-black);
-  padding-left: calc(var(--base-space) * 3);
+  padding-left: calc(var(--base-space) * 4);
   border-bottom: 1px solid var(--color-grey);
+  cursor: pointer;
 }
 
 .album__contents {
@@ -78,6 +80,7 @@ body {
   margin: auto;
   text-decoration: none;
   padding: var(--base-space);
+  cursor: pointer;
 }
 
 .album__content i {
