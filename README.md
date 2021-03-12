@@ -1,10 +1,10 @@
 ## 😼 PROJECT
 
-A cat album to practice fetching API data and rendering it
+A cat album to practice fetching and rendering API data with vanilla JavaScript
 
 ---
 
-## 📎 PLAN
+## 📌 PLAN
 
 #### STACK
 
