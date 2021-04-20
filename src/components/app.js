@@ -28,6 +28,5 @@ function App(app) {
       } else if (node.type === 'FILE') {
       }
     }
-  })
-  
+  }) 
 }
