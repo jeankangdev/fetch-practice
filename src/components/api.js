@@ -10,3 +10,6 @@ const request = (nodeId) => {
   })
   .catch((error) => throw new Error(error.message)
 }
+
+// request with async ~ await
+

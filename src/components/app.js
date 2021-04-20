@@ -28,5 +28,29 @@ function App(app) {
       } else if (node.type === 'FILE') {
       }
     }
+
+    this.setState = (nextState) => {
+      this.state = nextState
+      breadcrumb.setState(this.state.depth)
+      nodes.setState({
+        isRoot: this.state.isRoot,
+        nodes: this.state.nodes
+      })
+    }
+
+    const init = async = () => {
+      try {
+        const rootNodes = await request()
+        this.setState({
+          ...this.state,
+          isRoot: true,
+          nodes: rootNodes
+        })
+      } catch(error) {
+        // deal with errors
+      }
+    }
+
+    init()
   }) 
 }
