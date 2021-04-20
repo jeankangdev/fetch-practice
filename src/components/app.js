@@ -20,6 +20,28 @@ function App(app) {
       nodes: this.state.nodes
     },
 
+  const nodes = new Nodes({
+    app,
+    initialState: [],
+    
+    onClick: async (node) => {
+      try {
+        if (node.type === 'DIRECTORY') {
+          const nextNodes = await request(node.id)
+          this.setState({
+            ...this.state,
+            depth: [...this.state.depth, node],
+            nodes: nextNodes
+          })
+        } else if (node.type === 'FILE') {
+          // open image
+        } catch(error) {
+          // deal with the error
+        }
+      }
+    }
+  })
+
     // When clicking events happen in Nodes, call onClick function
     // In this way, Nodes don't have to know what logic the onClick func has
     onClick: (node) => {
@@ -50,7 +72,6 @@ function App(app) {
         // deal with errors
       }
     }
-
     init()
   }) 
 }
